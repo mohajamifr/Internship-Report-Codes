@@ -32,8 +32,8 @@ early_stopping = EarlyStopping(monitor='val_loss', patience=3, restore_best_weig
 train = model.fit(x_train, y_train[:, :, :4], epochs=100, batch_size=128, validation_data=(x_test, y_test[:, :, :4]), callbacks=[early_stopping])
 
 # Saving/Loading the Model
-model.save('CNNO1_Anes')
-model = load_model('CNNO1_Anes')
+model.save('IRNNO_Anes')
+model = load_model('IRNNO_Anes')
 
 # Evaluating the Model
 loss = model.evaluate(x_test, y_test[:, :, :4])
